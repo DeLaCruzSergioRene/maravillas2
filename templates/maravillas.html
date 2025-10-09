@@ -1,7 +1,41 @@
 {% extends "base.html" %}
 {% block title %}Las Maravillas del Mundo{% endblock %}
 {% block content %}
-    <h2>Las 7 Maravillas del Mundo:</h2>
-        <p>Descripción breve y sus imágenes.</p>
+    <h2 class="subtitulo">Las 7 Maravillas del Mundo Antiguas.</h2>
+        <p class="texto-parrafo">
+            En este sitio encontrarás información relevante sobre las 7 maravillas del mundo antiguo.
+        </p>
+        
+        <div id="carruselX" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselX" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+            <button type="button" data-bs-target="#carruselX" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+            <button type="button" data-bs-target="#carruselX" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+            <button type="button" data-bs-target="#carruselX" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+        </div>
 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/Coloso_de_Rodas.png" class="d-block w-100" alt="El gran e imponente Coloso de Rodas.">
+            </div>
+            <div class="carousel-item">
+                <img src="static/Templo_de_Artemisa.png" class="d-block w-100" alt="El gran y antiguo Templo de Artemisa.">
+            </div>
+            <div class="carousel-item">
+                <img src="static/Piramide.png" class="d-block w-100" alt="La enorme e intrigante Piramide de Guiza.">
+            </div>
+            <div class="carousel-item">
+                <img src="static/Jardines_Colgantes.png" class="d-block w-100" alt="Los hermosos y antiguos Jardines Colgantes de Babilonia.">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselX" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselX" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
 {% endblock %}
