@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}Plantilla Base{% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1>Base De Página.</h1>
+    <nav>
+    <a href="/">Inicio</a> |
+    <a href="/ani">Animales exóticos</a> |
+    <a href="/veh">Vehículos antiguos</a> |
+    <a href="/mar">Las maravillas del mundo</a> |
+    <a href="/ace">Acerca de...</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+</footer>
+<p>Información de diferentes cosas importantes o antiguas del pasado.</p>
+</body>
+</html>
