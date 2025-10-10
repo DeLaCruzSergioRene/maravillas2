@@ -61,24 +61,3 @@ h3 {
     font-size: 0.95rem;
     letter-spacing: 0.5px;
 }
-
-.contenedor-animal {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-}
-
-.texto {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.imagen img {
-    width: 60%;
-    height: auto;
-    border-radius: 20px;
-}
-
-
