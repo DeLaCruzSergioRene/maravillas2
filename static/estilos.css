@@ -7,6 +7,11 @@
     margin: 0 auto;     
 }
 
+.img-carrusel {
+    height: 500px;     
+    object-fit: cover;   
+}
+
 .carousel-item img {
     max-height: 600px;  
     object-fit: cover;  
@@ -23,6 +28,7 @@
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: center;
+    margin-top: 20px;
 }
 
 .h1 {
@@ -34,8 +40,45 @@
 
 h2 {
     margin-top:20px;
-    font-size: 1.5rem;  
+    font-size: 2rem;  
     color: #06d11ecc;
     text-align: center;
     margin-bottom: 20px;
+    background-color: aquamarine;
 }
+
+h3 {
+    text-align: center;
+    color: #0bd1e8;
+}
+
+.footer {
+    background-color: #4d96df;     
+    color: #000000;              
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.contenedor-animal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.texto {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.imagen img {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+}
+
+

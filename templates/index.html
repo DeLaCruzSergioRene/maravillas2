@@ -1,8 +1,30 @@
 {% extends "base.html" %}
 {% block title %}Inicio{% endblock %}
 {% block content %}
-    <h2>Inicio:</h2>
-        <p class="texto-parrafo">
-            Sobre que trata la página y que podrá encontrar, también deberá mostrar al menos 2 imágenes.
-        </p>
+    <h2>¿Qué podrás encontrar aquí?</h2>
+    <div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <img src="static/ford_1948.png" class="img-fluid" alt="Auto antiguo">
+            <p class="texto-parrafo">
+                Autos clásicos que cuentan la historia de la ingeniería y el diseño de otras épocas.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="static/gato_montes.png" class="img-fluid" alt="Auto antiguo">
+            <p class="texto-parrafo">
+                Imágenes sobre animales considerados exóticos o atractivos por su apariencia.
+            </p>
+        </div>
+    
+    <div class="container my-5">
+    <div class="row justify-content-center"> <!-- Alinear en el centro cuando es una sola imagen y no se ocupa usar todas las columnas. -->
+        <div class="col-md-6 text-center">
+            <img src="static/Coliseo_Romano.png" class="img-fluid" alt="Maravilla del mundo.">
+            <p class="texto-parrafo">
+                Las 7 Maravillas Del Mundo con una pequeña porción de información sobre estas.
+            </p>
+        </div>
+    </div>
+</div>
 {% endblock %}
