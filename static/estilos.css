@@ -62,3 +62,19 @@ h3 {
     font-size: 0.95rem;
     letter-spacing: 0.5px;
 }
+
+.btn-registro {
+    background-color: #0edd3b;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-registro:hover {
+    background-color: #165eab;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}

@@ -27,5 +27,15 @@ def acercas():
     
     return render_template("acerca.html")
 
+@app.route("/ses")
+def sesion():
+    
+    return render_template("sesion.html")
+
+@app.route("/reg")
+def registrar():
+    
+    return render_template("registro.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
