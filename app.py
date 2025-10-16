@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
+
+app.config["SECRET_KEY"] = "una_clave_secreta_muy_larga_y_dificil_de_adivinar"
 
 @app.route("/")
 def index():
@@ -37,5 +39,21 @@ def registrar():
     
     return render_template("registro.html")
 
+@app.route("/registrame", methods=["GET", "POST"])
+def registrame():
+    error = None
+    if request.method == "POST":
+        nombre = request.form["nombre"]
+        apellidos = request.form["apellidos"]
+        dia = request.form["dia"]
+        mes = request.form["mes"]
+        anio = request.form["anio"]
+        genero = request.form["genero"]
+        email = request.form["email"]
+        contrasena = request.form["contrasena"]
+        confirmar_contrasena = request.form["confirmar_contrasena"]
+        
+        
+        
 if __name__ == "__main__":
     app.run(debug=True)

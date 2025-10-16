@@ -4,25 +4,25 @@
 
     <div class="container">
         <h2 class="text-center mb-4">Crea una cuenta: Es rápido y fácil.</h2> 
-        <form>
+        <form method="POST" action="{{ url_for('registrame') }}">
             <div class="row">
                 <div class="col-md-6 mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                <input type="text" class="form-control" id="nombre" name="nombre" value = "{{ request.form.get('nombre', '')}}" placeholder="Nombre" required minlenght="3" maxlenght="100">
             </div>
 
             <div class="col-md-6 mb-3">
                 <label for="apellido" class="form-label">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" value = "{{ request.form.get('apellidos', '')}}" placeholder="Apellido" required minlenght="3" maxlenght="100">
             </div>
             </div>
 
-
+            <!-- Fecha de nacimiento -->
             <div class="mb-3">
                 <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
                 <div class="row">
                     <div class="col-md-4">
-                        <select class="form-select" id="dia" required>
+                        <select class="form-select" id="dia" name="dia" value = "{{ request.form.get('dia', '')}}" required>
                             <option value="">Día</option> <!-- Dia 1 a 31 para elegir -->
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -58,7 +58,7 @@
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select class="form-select" id="mes" required>
+                        <select class="form-select" id="mes" name="mes" value = "{{ request.form.get('mes', '')}}" required>
                             <option value="">Mes</option> <!-- Todos los 12 meses -->
                             <option value="1">Enero</option>
                             <option value="2">Febrero</option>
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select class="form-select" id="anio" required>
+                        <select class="form-select" id="anio" name="anio" value = "{{ request.form.get('anio', '')}}" required>
                             <option value="">Año</option> <!-- Año de 1980 a 2025 -->
                             <option value="1980">1980</option>
                             <option value="1981">1981</option>
@@ -131,7 +131,7 @@
 
             <div class="mb-3">
                 <label for="genero" class="form-label">Género:</label>
-                <select class="form-select" id="genero" name="genero" required>
+                <select class="form-select" id="genero" name="genero" value = "{{ request.form.get('genero', '')}}" required>
                 <option value="">Selecciona tu género</option>
                 <option value="mujer">Mujer</option>
                 <option value="hombre">Hombre</option>
@@ -141,16 +141,20 @@
 
             <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico:</label>
-                <input type="email" class="form-control" id="email" placeholder="Numero de celular o correo electrónico" required>
+                <input type="email" class="form-control" id="email" name="email" value="{{ request.form.get('email', '') }}" placeholder="Numero de celular o correo electrónico" required minlenght="3" maxlenght="100">
             </div>
 
             <div class="mb-3">
                 <label for="contrasena" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="contrasena" placeholder="Contraseña nueva" required>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" value = "{{ request.form.get('contrasena', '')}}" placeholder="Contraseña nueva" required minlenght="3" maxlenght="100">
             </div>
+
+            <div class="mb-3">
+                <label for="contrasena_confirm" class="form-label">Confirmar Contraseña:</label>
+                <input type="password" name="confirmar_contrasena" value = "{{ request.form.get('confirmar_contrasena', '')}}" placeholder="Confirmar contraseña" required minlenght="3" maxlenght="100"> 
+            </div>
+
             <button type="submit" class="btn btn-registro w-100 mb-3">Registrarte</button>
-            <p class="text-center"><a href="#">¿Ya tienes una cuenta?</a></p>
             </form>
         </div>
-
 {% endblock %}
