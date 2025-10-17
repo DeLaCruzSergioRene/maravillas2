@@ -78,3 +78,13 @@ body {
     background-color: #f0f2f5;
     font-family: Arial, sans-serif;
 }
+
+.formulario-registro {
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #e0e0e0; 
+    max-width: 450px;
+    margin: 50px auto;
+}
