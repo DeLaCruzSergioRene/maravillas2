@@ -53,6 +53,14 @@ def registrame():
         contrasena = request.form["contrasena"]
         confirmar_contrasena = request.form["confirmar_contrasena"]
         
+        if len(nombre) < 3:
+            flash("El nombre debe tener al menos 3 caracteres.")
+            return render_template("registro.html", nombre=nombre)
+        
+        if len(apellidos) < 3:
+            flash("No puede haber menos de 3 caracteres.")
+            return render_template("registro.html", apellidos=apellidos) 
+        
         if contrasena != confirmar_contrasena:
             error = "La contraseña no coincide."
             
@@ -60,7 +68,7 @@ def registrame():
             flash(error)
             return render_template("registro.html")
         else:
-            flash(f"¡Registro exitoso para el usuario: {nombre}!")
+            flash(f"¡Registro exitoso para el usuario: ¡{nombre}!")
             return render_template("index.html")
         
 if __name__ == "__main__":

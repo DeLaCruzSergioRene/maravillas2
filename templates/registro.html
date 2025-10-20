@@ -22,12 +22,12 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" value = "{{ request.form.get('nombre', '')}}" placeholder="Nombre" required minlenght="3" maxlenght="100">
+                <input type="text" class="form-control" id="nombre" name="nombre" value = "{{ request.form.get('nombre', '')}}" required minlenght="3" maxlenght="100" placeholder="Nombre">
             </div>
 
             <div class="col-md-6 mb-3">
-                <label for="apellido" class="form-label">Apellido:</label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" value = "{{ request.form.get('apellidos', '')}}" placeholder="Apellido" required minlenght="3" maxlenght="100">
+                <label for="apellido" class="form-label">Apellidos:</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" value = "{{ request.form.get('apellidos', '')}}" required minlenght="3" maxlenght="100" placeholder="Apellido">
             </div>
             </div>
 
@@ -149,23 +149,23 @@
                 <option value="">Selecciona tu género</option>
                 <option value="mujer">Mujer</option>
                 <option value="hombre">Hombre</option>
-                <option value="personalizado">Personalizado</option>
+                <option value="personalizado">Prefiero no decirlo</option>
             </select>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico:</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{ request.form.get('email', '') }}" placeholder="Numero de celular o correo electrónico" required minlenght="3" maxlenght="100">
+                <input type="email" class="form-control" id="email" name="email" value="{{ request.form.get('email', '') }}" required minlenght="3" maxlenght="100" placeholder="Numero de celular o correo electrónico">
             </div>
 
             <div class="mb-3">
                 <label for="contrasena" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" value = "{{ request.form.get('contrasena', '')}}" placeholder="Contraseña nueva" required minlenght="3" maxlenght="100">
+                <input type="password" class="form-control" id="contrasena" name="contrasena" value = "{{ request.form.get('contrasena', '')}}" required minlenght="3" maxlenght="100" placeholder="Contraseña nueva">
             </div>
 
             <div class="mb-3">
                 <label for="contrasena_confirm" class="form-label">Confirmar Contraseña:</label>
-                <input type="password" name="confirmar_contrasena" value = "{{ request.form.get('confirmar_contrasena', '')}}" placeholder="Confirmar contraseña" required minlenght="3" maxlenght="100"> 
+                <input type="password" name="confirmar_contrasena" value = "{{ request.form.get('confirmar_contrasena', '')}}" required minlenght="3" maxlenght="100" placeholder="Confirmar contraseña"> 
             </div>
 
             <button type="submit" class="btn btn-registro w-100 mb-3">Registrarte</button>
