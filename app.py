@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 app = Flask(__name__)
 
@@ -67,6 +67,29 @@ def registrame():
         if error != None:
             flash(error)
             return render_template("registro.html")
+        else:
+            flash(f"¡Registro exitoso para el usuario: ¡{nombre}!")
+            return render_template("index.html")
+        
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    error = None
+    if request.method == "POST":
+        nombre = request.form["nombre"]
+        email = request.form["email"]
+        contrasena = request.form["contrasena"]
+        confirmar_contrasena = request.form["confirmar_contrasena"]
+        
+        if len(nombre) < 3:
+            flash("El nombre debe tener al menos 3 caracteres.")
+            return render_template("sesion.html", nombre=nombre)
+        
+        if contrasena != confirmar_contrasena:
+            error = "La contraseña no coincide."
+            
+        if error != None:
+            flash(error)
+            return render_template("sesion.html")
         else:
             flash(f"¡Registro exitoso para el usuario: ¡{nombre}!")
             return render_template("index.html")
