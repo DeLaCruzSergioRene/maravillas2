@@ -91,8 +91,17 @@ def login():
             flash(error)
             return render_template("sesion.html")
         else:
+            session["nombre"] = nombre
+            session["email"] = email
             flash(f"¡Registro exitoso para el usuario: ¡{nombre}!")
-            return render_template("index.html")
+            return redirect(url_for("index"))
+    return render_template("sesion.html")
+
+@app.route("/cerrar_sesion")
+def cerrar_sesion():
+    session.clear()  
+    flash("Has cerrado sesión exitosamente.")
+    return redirect(url_for("login"))
         
 if __name__ == "__main__":
     app.run(debug=True)
